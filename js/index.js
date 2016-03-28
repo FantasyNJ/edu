@@ -125,6 +125,7 @@ var allNum;
 				var oH4=oCour[i].getElementsByTagName('h4')[0];	
 				var oLearner=getElementsByClassName(oCour[i],'learner');
 				var oP=oCour[i].getElementsByTagName('p');
+				oImg[0].src='';
 				oImg[0].src=oImg[1].src=arr[i].bigPhotoUrl;
 				oH3.innerHTML=oH4.innerHTML=arr[i].name;
 				oEm.innerHTML=arr[i].provider;
