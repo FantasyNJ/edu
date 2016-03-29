@@ -263,20 +263,25 @@ var allNum;
 	for(var i=0;i<aA.length;i++){
 		aA[i].style.zIndex=aA.length-i;
 	}
+
+	//移到图片上暂停
+	for(var i=0;i<aA.length;i++){
+		addEvent(aA[i],'mouseover',function(){
+			clearInterval(timer_ban);
+		});
+		addEvent(aA[i],'mouseout',function(){
+			timer_ban=setInterval(tab,5000);
+		});
+	}
+	
+
 	//图片居中
 	function toResize(){
 		var viewWidth=document.documentElement.clientWidth;
 		var left=(viewWidth-parseInt(getStyle(aA[0],'width')))/2;
-		if(viewWidth>=1208){
+		if(viewWidth>=960){
 			for(var i=0;i<aA.length;i++){
 				aA[i].style.left=left+'px';
-				//移到图片上暂停
-				 addEvent(aA[i],'mouseover',function(){
-				 	clearInterval(timer_ban);
-				 });
-				 addEvent(aA[i],'mouseout',function(){
-				 	timer_ban=setInterval(tab,5000);
-				 });
 			}
 		}
 	}
