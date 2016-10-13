@@ -60,3 +60,6 @@ banner3： [http://www.icourse163.org/](http://www.icourse163.org/)
 固定用户密码：study.163.com ;  
 使用Md5加密该用户数据 ;  
 
+
+### 在线地址  
+[http://demo.ayabala.com/edu](http://demo.ayabala.com/edu)
